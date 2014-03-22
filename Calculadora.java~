@@ -1,0 +1,25 @@
+class Calculadora {
+
+  private native double suma(double operador_1, double operador_2);
+  private native String resta(int operador_1, int operador_2);
+
+  public double sumar()
+  {
+    return suma(2, 2);
+  }
+ 
+  public static void main(String args[]) {
+    double i = 20; 
+    double i2 = 15.0; 
+    Calculadora cal = new Calculadora();
+    double input = cal.suma(i, i);
+    String input2 = cal.resta(20, 10);
+
+    System.out.println("Resultado suma " + input);
+    System.out.println("Resultado resta " + input2);
+    System.out.println("Resultado suma2 " + cal.sumar());
+  }
+  static {
+    System.loadLibrary("Calculadora");
+  }
+}
