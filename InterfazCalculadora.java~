@@ -20,17 +20,13 @@ public class InterfazCalculadora
     private JButton boton_suma, boton_resta, boton_multiplicacion, boton_division, boton_resetear;
     
     /** El campo de texto */
-    private JTextField entrada_operador_1, entrada_operador_2, resultado;
+    private JTextField entrada_operador1, entrada_operador_2, resultado;
     private JLabel operador;
-
-    private Calculadora calculadora;
 
     public InterfazCalculadora()
     {
         // Nueva ventana. Se el pone un FlowLayout para que el botón y campo
         // de texto quede alineados.
-  
-        calculadora = new Calculadora();
         ventana = new JFrame("Calculadora Java - JNI - C");
 
   
@@ -38,10 +34,10 @@ public class InterfazCalculadora
         ventana.setLocationRelativeTo(null);
         ventana.setLayout(null);
 
-        entrada_operador_1 = new JTextField(20);
-        entrada_operador_1.setSize(100,20);
-        entrada_operador_1.setLocation(100,100);
-        ventana.getContentPane().add(entrada_operador_1);
+        entrada_operador1 = new JTextField(20);
+        entrada_operador1.setSize(100,20);
+        entrada_operador1.setLocation(100,100);
+        ventana.getContentPane().add(entrada_operador1);
 
         entrada_operador_2 = new JTextField(20);
         entrada_operador_2.setSize(100,20);
@@ -66,8 +62,7 @@ public class InterfazCalculadora
 
         boton_suma.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-                double res = calculadora.Sumar(Double.parseDouble(entrada_operador_1.getText().toString()), Double.parseDouble(entrada_operador_2.getText().toString()));
-                resultado.setText(Double.toString(res));
+                resultado.setText ("Hola mundo");
                 operador.setText ("+");
         }});
 
@@ -79,8 +74,7 @@ public class InterfazCalculadora
 
         boton_resta.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-                double res = calculadora.Restar(Double.parseDouble(entrada_operador_1.getText().toString()), Double.parseDouble(entrada_operador_2.getText().toString()));
-                resultado.setText(Double.toString(res));
+                resultado.setText ("Hola mundo2");
                 operador.setText ("-");
         }});
 
@@ -93,8 +87,7 @@ public class InterfazCalculadora
 
         boton_multiplicacion.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-                double res = calculadora.Multiplicar(Double.parseDouble(entrada_operador_1.getText().toString()), Double.parseDouble(entrada_operador_2.getText().toString()));
-                resultado.setText(Double.toString(res));
+                resultado.setText ("Hola mundo3");
                 operador.setText ("*");
         }});
 
@@ -106,8 +99,7 @@ public class InterfazCalculadora
 
         boton_division.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-                double res = calculadora.Dividir(Double.parseDouble(entrada_operador_1.getText().toString()), Double.parseDouble(entrada_operador_2.getText().toString()));
-                resultado.setText(Double.toString(res));
+                resultado.setText ("Hola mundo4");
                 operador.setText ("/");
         }});
 
@@ -121,7 +113,7 @@ public class InterfazCalculadora
         	public void actionPerformed(ActionEvent e) {
                 resultado.setText ("");
                 operador.setText ("operador");
-                entrada_operador_1.setText("");
+                entrada_operador1.setText("");
                 entrada_operador_2.setText("");
         }});
 
