@@ -21,7 +21,6 @@ class Calculadora{
   public double Dividir(double operador_1, double operador_2){
     return DivisionC(operador_1, operador_2);
   }
-
   static {
     System.loadLibrary("Calculadora");
   }
