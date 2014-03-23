@@ -9,9 +9,9 @@ ITCR - I Semestre 2014
   3. Java InterfazCalculadora
 
 
-- Esta parte no es necesaria hacerla, pues ya estan compiladas estas clases.
-- Compilacion de la parte del JNI
 
+- Compilacion de la parte del JNI
+Esta parte no es necesaria hacerla, pues ya estan compiladas estas clases.
 - Para complilar correctamente las clases yo utilice los siguientes comandos.
   1. javac Calculadora.java 
   2. javah -jni Calculadora
