@@ -3,6 +3,14 @@
 Para el curso de Aplicaciones Moviles
 ITCR - I Semestre 2014
 
+- Para correr la interfaz debemos utilizar los siguientes comandos
+  1. javac InterfazCalculadora.java
+  2. xport LD_LIBRARY_PATH=.
+  3. Java InterfazCalculadora
+
+
+
+- Compilacion de la parte del JNI
 
 - Para complilar correctamente las clases yo utilice los siguientes comandos.
   1. javac Calculadora.java 
