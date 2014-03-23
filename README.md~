@@ -5,11 +5,11 @@ ITCR - I Semestre 2014
 
 - Para correr la interfaz debemos utilizar los siguientes comandos
   1. javac InterfazCalculadora.java
-  2. export LD_LIBRARY_PATH=.
+  2. xport LD_LIBRARY_PATH=.
   3. Java InterfazCalculadora
 
 
-- Esta parte no es necesaria hacerla, pues ya estan compiladas estas clases.
+
 - Compilacion de la parte del JNI
 
 - Para complilar correctamente las clases yo utilice los siguientes comandos.
