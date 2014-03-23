@@ -73,7 +73,7 @@ public class InterfazCalculadora
     }
 
 
-    private void BotonSuma()
+    public void BotonSuma()
     {
         // Boton para la operacion suma
         boton_suma = new JButton("+");
@@ -85,14 +85,16 @@ public class InterfazCalculadora
         	public void actionPerformed(ActionEvent e) {
             if(ValidadEntradas())
             {
-                resul = calculadora.Sumar(Operador1(), Operador2());
+                operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                resul = calculadora.Sumar(operador_1, operador_2);
                 resultado.setText(Double.toString(resul));
                 operador.setText ("+");
             }
         }});
     }
 
-    private void BotonResta()
+    public void BotonResta()
     {
         // Boton para la operacion resta
         boton_resta = new JButton("-");
@@ -104,7 +106,9 @@ public class InterfazCalculadora
         	public void actionPerformed(ActionEvent e) {
             if(ValidadEntradas())
             {
-                resul = calculadora.Restar(Operador1(), Operador2());
+                operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                resul = calculadora.Restar(operador_1, operador_2);
                 resultado.setText(Double.toString(resul));
                 operador.setText ("-");
             }
@@ -112,7 +116,7 @@ public class InterfazCalculadora
     }
 
 
-    private void BotonMultiplicacion()
+    public void BotonMultiplicacion()
     {
         // Boton para la operacion multiplicacion
         boton_multiplicacion = new JButton("*");
@@ -124,7 +128,9 @@ public class InterfazCalculadora
         	public void actionPerformed(ActionEvent e) {
             if(ValidadEntradas())
             {
-                resul = calculadora.Multiplicar(Operador1(), Operador2());
+                operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                resul = calculadora.Multiplicar(operador_1, operador_2);
                 resultado.setText(Double.toString(resul));
                 operador.setText ("*");
             }
@@ -132,7 +138,7 @@ public class InterfazCalculadora
     }
 
 
-    private void BotonDivision()
+    public void BotonDivision()
     {
         // Boton para la operacion division
         boton_division = new JButton("/");
@@ -144,7 +150,9 @@ public class InterfazCalculadora
         	public void actionPerformed(ActionEvent e) {
             if(ValidadEntradas())
             {
-                resul = calculadora.Dividir(Operador1(), Operador2());
+                operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                resul = calculadora.Dividir(operador_1, operador_2);
                 resultado.setText(Double.toString(resul));
                 operador.setText ("/");
             }
@@ -152,7 +160,7 @@ public class InterfazCalculadora
     }
 
 
-    private void BotonResetear()
+    public void BotonResetear()
     {
         // Boton para la operacion resetear
         boton_resetear = new JButton("Resetear");
@@ -170,25 +178,14 @@ public class InterfazCalculadora
     }
 
 
-    private double Operador1()
-    { 
-        return Double.parseDouble(entrada_operador_1.getText().toString());
-    }
-
-
-    private double Operador2()
-    { 
-        return Double.parseDouble(entrada_operador_2.getText().toString());
-    }
-
-
-    private boolean ValidadEntradas()
+    public boolean ValidadEntradas()
     {
       if(entrada_operador_1.getText().equals("") || entrada_operador_2.getText().equals(""))
       {
           JOptionPane.showMessageDialog(null, "Se denen colocar los 2 operandos!", "Error", JOptionPane.ERROR_MESSAGE);
           return false;
       }
+        
       else
         return true;
     }
