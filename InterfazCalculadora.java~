@@ -196,9 +196,9 @@ public class InterfazCalculadora
 
     private boolean SonNumero(){
 	    try {
-          Double.parseDouble(entrada_operador_1.getText().toString());
+		      Double.parseDouble(entrada_operador_1.getText().toString());
           Double.parseDouble(entrada_operador_2.getText().toString());
-          return true;
+		      return true;
 	    } 
       catch (NumberFormatException nfe){
           JOptionPane.showMessageDialog(null, "Las entradas deben ser numeros", "Error", JOptionPane.ERROR_MESSAGE);

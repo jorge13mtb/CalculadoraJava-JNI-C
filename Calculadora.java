@@ -24,6 +24,7 @@ class Calculadora{
     return MultiplicacionC(operador_1, operador_2);
   }
 
+
   // Metodo "Dividir" llama al metodo nativo "DividirC"
   public double Dividir(double operador_1, double operador_2){
     return DivisionC(operador_1, operador_2);
