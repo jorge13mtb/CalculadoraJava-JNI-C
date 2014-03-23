@@ -15,6 +15,7 @@ public class InterfazCalculadora
     private JButton boton_suma, boton_resta, boton_multiplicacion, boton_division, boton_resetear;
     private JTextField entrada_operador_1, entrada_operador_2, resultado;
     private JLabel operador, titulo, texto_igual;
+    private double operador_1, operador_2, resul;
 
     // Creacion del Objeto calculadora, esta clase esta escrita en java, pero utiliza metodos nativos del Lenguaje C
     private Calculadora calculadora;
@@ -84,10 +85,10 @@ public class InterfazCalculadora
         	public void actionPerformed(ActionEvent e) {
             if(ValidadEntradas())
             {
-                double operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
-                double operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
-                double res = calculadora.Sumar(operador_1, operador_2);
-                resultado.setText(Double.toString(res));
+                operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                resul = calculadora.Sumar(operador_1, operador_2);
+                resultado.setText(Double.toString(resul));
                 operador.setText ("+");
             }
         }});
@@ -105,10 +106,10 @@ public class InterfazCalculadora
         	public void actionPerformed(ActionEvent e) {
             if(ValidadEntradas())
             {
-                double operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
-                double operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
-                double res = calculadora.Restar(operador_1, operador_2);
-                resultado.setText(Double.toString(res));
+                operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                resul = calculadora.Restar(operador_1, operador_2);
+                resultado.setText(Double.toString(resul));
                 operador.setText ("-");
             }
         }});
@@ -127,10 +128,10 @@ public class InterfazCalculadora
         	public void actionPerformed(ActionEvent e) {
             if(ValidadEntradas())
             {
-                double operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
-                double operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
-                double res = calculadora.Multiplicar(operador_1, operador_2);
-                resultado.setText(Double.toString(res));
+                operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                resul = calculadora.Multiplicar(operador_1, operador_2);
+                resultado.setText(Double.toString(resul));
                 operador.setText ("*");
             }
         }});
@@ -149,10 +150,10 @@ public class InterfazCalculadora
         	public void actionPerformed(ActionEvent e) {
             if(ValidadEntradas())
             {
-                double operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
-                double operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
-                double res = calculadora.Dividir(operador_1, operador_2);
-                resultado.setText(Double.toString(res));
+                operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                resul = calculadora.Dividir(operador_1, operador_2);
+                resultado.setText(Double.toString(resul));
                 operador.setText ("/");
             }
         }});
