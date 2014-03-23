@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "Calculadora.h"
 
+
+// Metodo en C que realiza la suma
 JNIEXPORT jdouble JNICALL 
 Java_Calculadora_SumaC(JNIEnv *env, jobject obj, jdouble operador_1,  jdouble operador_2)
 {
@@ -9,6 +11,7 @@ Java_Calculadora_SumaC(JNIEnv *env, jobject obj, jdouble operador_1,  jdouble op
 }
 
 
+// Metodo en C que realiza la resta
 JNIEXPORT jdouble JNICALL 
 Java_Calculadora_RestaC(JNIEnv *env, jobject obj, jdouble operador_1,  jdouble operador_2)
 {
@@ -16,6 +19,7 @@ Java_Calculadora_RestaC(JNIEnv *env, jobject obj, jdouble operador_1,  jdouble o
 }
 
 
+// Metodo en C que realiza la multiplicacion
 JNIEXPORT jdouble JNICALL 
 Java_Calculadora_MultiplicacionC(JNIEnv *env, jobject obj, jdouble operador_1,  jdouble operador_2)
 {
@@ -23,6 +27,7 @@ Java_Calculadora_MultiplicacionC(JNIEnv *env, jobject obj, jdouble operador_1,  
 }
 
 
+// Metodo en C que realiza la division
 JNIEXPORT jdouble JNICALL 
 Java_Calculadora_DivisionC(JNIEnv *env, jobject obj, jdouble operador_1,  jdouble operador_2)
 {

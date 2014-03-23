@@ -87,7 +87,7 @@ public class InterfazCalculadora
             {
                 resul = calculadora.Sumar(Operador1(), Operador2());
                 resultado.setText(Double.toString(resul));
-                operador.setText ("+");
+                operador.setText("+");
             }
         }});
     }
@@ -106,7 +106,7 @@ public class InterfazCalculadora
             {
                 resul = calculadora.Restar(Operador1(), Operador2());
                 resultado.setText(Double.toString(resul));
-                operador.setText ("-");
+                operador.setText("-");
             }
         }});
     }
@@ -126,7 +126,7 @@ public class InterfazCalculadora
             {
                 resul = calculadora.Multiplicar(Operador1(), Operador2());
                 resultado.setText(Double.toString(resul));
-                operador.setText ("*");
+                operador.setText("*");
             }
         }});
     }
@@ -146,7 +146,7 @@ public class InterfazCalculadora
             {
                 resul = calculadora.Dividir(Operador1(), Operador2());
                 resultado.setText(Double.toString(resul));
-                operador.setText ("/");
+                operador.setText("/");
             }
         }});
     }
