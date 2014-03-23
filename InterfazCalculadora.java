@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
-
+import javax.swing.JOptionPane; 
 
 // Clase que impleta una interfaz grafica para utilizar una calculadora sencilla (+, - , *, /)
 public class InterfazCalculadora
@@ -181,7 +181,11 @@ public class InterfazCalculadora
     public boolean ValidadEntradas()
     {
       if(entrada_operador_1.getText().equals("") || entrada_operador_2.getText().equals(""))
-        return false;
+      {
+          JOptionPane.showMessageDialog(null, "Se denen colocar los 2 operandos!", "Error", JOptionPane.ERROR_MESSAGE);
+          return false;
+      }
+        
       else
         return true;
     }
