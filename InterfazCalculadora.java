@@ -70,9 +70,14 @@ public class InterfazCalculadora
 
         boton_suma.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-                double res = calculadora.Sumar(Double.parseDouble(entrada_operador_1.getText().toString()), Double.parseDouble(entrada_operador_2.getText().toString()));
+            if(ValidadEntradas())
+            {
+                double operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                double operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                double res = calculadora.Sumar(operador_1, operador_2);
                 resultado.setText(Double.toString(res));
                 operador.setText ("+");
+            }
         }});
 
         // Boton para la operacion resta
@@ -83,9 +88,14 @@ public class InterfazCalculadora
 
         boton_resta.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-                double res = calculadora.Restar(Double.parseDouble(entrada_operador_1.getText().toString()), Double.parseDouble(entrada_operador_2.getText().toString()));
+            if(ValidadEntradas())
+            {
+                double operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                double operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                double res = calculadora.Restar(operador_1, operador_2);
                 resultado.setText(Double.toString(res));
                 operador.setText ("-");
+            }
         }});
 
 
@@ -97,9 +107,14 @@ public class InterfazCalculadora
 
         boton_multiplicacion.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-                double res = calculadora.Multiplicar(Double.parseDouble(entrada_operador_1.getText().toString()), Double.parseDouble(entrada_operador_2.getText().toString()));
+            if(ValidadEntradas())
+            {
+                double operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                double operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                double res = calculadora.Multiplicar(operador_1, operador_2);
                 resultado.setText(Double.toString(res));
                 operador.setText ("*");
+            }
         }});
 
         // Boton para la operacion division
@@ -110,9 +125,14 @@ public class InterfazCalculadora
 
         boton_division.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-                double res = calculadora.Dividir(Double.parseDouble(entrada_operador_1.getText().toString()), Double.parseDouble(entrada_operador_2.getText().toString()));
+            if(ValidadEntradas())
+            {
+                double operador_1 = Double.parseDouble(entrada_operador_1.getText().toString());
+                double operador_2 = Double.parseDouble(entrada_operador_2.getText().toString());
+                double res = calculadora.Dividir(operador_1, operador_2);
                 resultado.setText(Double.toString(res));
                 operador.setText ("/");
+            }
         }});
 
         // Boton para la operacion resetear
@@ -131,6 +151,14 @@ public class InterfazCalculadora
 
         ventana.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         ventana.setVisible(true);   
+    }
+
+    public boolean ValidadEntradas()
+    {
+      if(entrada_operador_1.getText().equals("") || entrada_operador_2.getText().equals(""))
+        return false;
+      else
+        return true;
     }
 
 
