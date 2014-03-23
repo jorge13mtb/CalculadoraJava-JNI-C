@@ -83,7 +83,7 @@ public class InterfazCalculadora
 
         boton_suma.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-            if(ValidadEntradas())
+            if(ValidadEntradas() & SonNumero())
             {
                 resul = calculadora.Sumar(Operador1(), Operador2());
                 resultado.setText(Double.toString(resul));
@@ -102,7 +102,7 @@ public class InterfazCalculadora
 
         boton_resta.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-            if(ValidadEntradas())
+            if(ValidadEntradas() & SonNumero())
             {
                 resul = calculadora.Restar(Operador1(), Operador2());
                 resultado.setText(Double.toString(resul));
@@ -122,7 +122,7 @@ public class InterfazCalculadora
 
         boton_multiplicacion.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-            if(ValidadEntradas())
+            if(ValidadEntradas() & SonNumero())
             {
                 resul = calculadora.Multiplicar(Operador1(), Operador2());
                 resultado.setText(Double.toString(resul));
@@ -142,7 +142,7 @@ public class InterfazCalculadora
 
         boton_division.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-            if(ValidadEntradas())
+            if(ValidadEntradas() & SonNumero())
             {
                 resul = calculadora.Dividir(Operador1(), Operador2());
                 resultado.setText(Double.toString(resul));
@@ -191,6 +191,19 @@ public class InterfazCalculadora
       }
       else
         return true;
+    }
+
+
+    private boolean SonNumero(){
+	    try {
+		      Double.parseDouble(entrada_operador_1.getText().toString());
+          Double.parseDouble(entrada_operador_2.getText().toString());
+		      return true;
+	    } 
+      catch (NumberFormatException nfe){
+          JOptionPane.showMessageDialog(null, "Las entradas deben ser numeros", "Error", JOptionPane.ERROR_MESSAGE);
+		      return false;
+	    }
     }
 
 
