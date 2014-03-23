@@ -14,7 +14,7 @@ public class InterfazCalculadora
     private JFrame ventana;
     private JButton boton_suma, boton_resta, boton_multiplicacion, boton_division, boton_resetear;
     private JTextField entrada_operador_1, entrada_operador_2, resultado;
-    private JLabel operador, titulo;
+    private JLabel operador, titulo, texto_igual;
 
     // Creacion del Objeto calculadora, esta clase esta escrita en java, pero utiliza metodos nativos del Lenguaje C
     private Calculadora calculadora;
@@ -32,8 +32,8 @@ public class InterfazCalculadora
         ventana.setLayout(null);
 
         titulo = new JLabel("Calculadora Basica: Java - JNI - C");
-        titulo.setSize(150,20);
-        titulo.setLocation(300,50);
+        titulo.setSize(250,20);
+        titulo.setLocation(275,50);
         ventana.getContentPane().add(titulo);
 
         entrada_operador_1 = new JTextField(20);
@@ -41,20 +41,26 @@ public class InterfazCalculadora
         entrada_operador_1.setLocation(100,100);
         ventana.getContentPane().add(entrada_operador_1);
 
+        operador = new JLabel("Op");
+        operador.setSize(50,20);
+        operador.setLocation(275,100);
+        ventana.getContentPane().add(operador);
+
         entrada_operador_2 = new JTextField(20);
         entrada_operador_2.setSize(150,20);
         entrada_operador_2.setLocation(325,100);
         ventana.getContentPane().add(entrada_operador_2);
 
+        texto_igual = new JLabel("  =");
+        texto_igual.setSize(25,20);
+        texto_igual.setLocation(500,100);
+        ventana.getContentPane().add(texto_igual);
+
         resultado = new JTextField(20);
-        resultado.setSize(100,20);
-        resultado.setLocation(600,100);
+        resultado.setSize(150,20);
+        resultado.setLocation(550,100);
         ventana.getContentPane().add(resultado);
 
-        operador = new JLabel("Op");
-        operador.setSize(50,20);
-        operador.setLocation(275,100);
-        ventana.getContentPane().add(operador);
 
         // Boton para la operacion suma
         boton_suma = new JButton("+");
