@@ -15,6 +15,7 @@ public class InterfazCalculadora
     private JButton boton_suma, boton_resta, boton_multiplicacion, boton_division, boton_resetear;
     private JTextField entrada_operador_1, entrada_operador_2, resultado;
     private JLabel operador, titulo, texto_igual;
+    private double resul;
 
     // Creacion del Objeto calculadora, esta clase esta escrita en java, pero utiliza metodos nativos del Lenguaje C
     private Calculadora calculadora;
