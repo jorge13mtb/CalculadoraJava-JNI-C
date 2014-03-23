@@ -61,7 +61,19 @@ public class InterfazCalculadora
         resultado.setLocation(550,100);
         ventana.getContentPane().add(resultado);
 
+        BotonSuma();
+        BotonResta();
+        BotonMultiplicacion();
+        BotonDivision();
+        BotonResetear();
+  
+        ventana.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        ventana.setVisible(true);   
+    }
 
+
+    public void BotonSuma()
+    {
         // Boton para la operacion suma
         boton_suma = new JButton("+");
         boton_suma.setSize(100,25);
@@ -79,7 +91,10 @@ public class InterfazCalculadora
                 operador.setText ("+");
             }
         }});
+    }
 
+    public void BotonResta()
+    {
         // Boton para la operacion resta
         boton_resta = new JButton("-");
         boton_resta.setSize(100,25);
@@ -97,8 +112,11 @@ public class InterfazCalculadora
                 operador.setText ("-");
             }
         }});
+    }
 
 
+    public void BotonMultiplicacion()
+    {
         // Boton para la operacion multiplicacion
         boton_multiplicacion = new JButton("*");
         boton_multiplicacion.setSize(100,25);
@@ -116,7 +134,11 @@ public class InterfazCalculadora
                 operador.setText ("*");
             }
         }});
+    }
 
+
+    public void BotonDivision()
+    {
         // Boton para la operacion division
         boton_division = new JButton("/");
         boton_division.setSize(100,25);
@@ -134,7 +156,11 @@ public class InterfazCalculadora
                 operador.setText ("/");
             }
         }});
+    }
 
+
+    public void BotonResetear()
+    {
         // Boton para la operacion resetear
         boton_resetear = new JButton("Resetear");
         boton_resetear.setSize(100,25);
@@ -148,10 +174,8 @@ public class InterfazCalculadora
                 entrada_operador_1.setText("");
                 entrada_operador_2.setText("");
         }});
-
-        ventana.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        ventana.setVisible(true);   
     }
+
 
     public boolean ValidadEntradas()
     {
